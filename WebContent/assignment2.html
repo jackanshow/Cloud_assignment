@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Assignment 2</title>
+</head>
+<body>
+	<h1>Name:XiangXiang Wang</h1>
+	<h1>ID:1001681420</h1>
+	
+
+	<form action="mg5" method = "get">
+		<p>search for earthquake that greater than &ensp;  
+		<input type="text" name= "Mag" placeholder = "mag" style="width:30px; "> &ensp; <input type="submit" value = "submit">
+		<output name="res"></output>
+		</p>
+		
+	</form>
+	
+	<form action="mgR" method = "get">
+		<p>search for earthquake that magnitude for &ensp;  
+		<input type="text" name= "MagR1" placeholder = "mag1" style="width:35px; "/> &ensp;to&ensp;
+		<input type="text" name= "MagR2" placeholder = "mag2" style="width:35px; "/> &ensp;&ensp;
+		from&ensp;<input type="date" name= "date1"/> &ensp;to&ensp;<input type="date" name= "date2"/>&ensp;
+		<input type="submit" value = "submit">
+		</p>
+		
+	</form>
+	
+	<form action="sploc" method = "get">
+		<p>search for earthquake that near &ensp;  
+		<input type="text" name= "lat" placeholder = "latitude" style="width:50px; "/> &ensp;and&ensp;
+		<input type="text" name= "long" placeholder = "longitude" style="width:60px; "/> &ensp;
+		for&ensp;&ensp;<input type="text" name= "near" placeholder = "kilometers" style="width:70px; "/>&ensp;&ensp;
+		<input type="submit" value = "submit">
+		</p>
+	</form>
+	
+	
+	<form action="clust" method = "get">
+		<p>search for earthquake that cluster at two locat box &ensp;  
+		<input type="text" name= "lat1" placeholder = "lat1" style="width:35px; "/> ;
+		<input type="text" name= "long1" placeholder = "long1" style="width:35px; "/> &ensp;and&ensp;
+		<input type="text" name= "lat2" placeholder = "lat2" style="width:35px; "/> ;
+		<input type="text" name= "long2" placeholder = "long2" style="width:35px; "/>&ensp;&ensp;
+		<input type="submit" value = "submit">
+		</p>
+	</form>
+	
+	<p> There are often occur earthquake that magnitude larger than 4.0</p>
+	<p> at night(pm19:00:00-am07:00:00): <p style="color:red"> 329</p> 
+	<p>	and daytime(am07:00:00-pm19:00:00): <p style="color:red">327</p> ; In the past 30 days</p>
+
+	
+
+</body>
+</html>
