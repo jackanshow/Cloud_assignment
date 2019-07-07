@@ -13,6 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/*UTA-CSE 6331
+Xiangxiang Wang
+ID: 1001681420*/
+
+
 /**
  * Servlet implementation class Mag5
  */
@@ -78,13 +83,14 @@ public class Mag5 extends HttpServlet {
 	        }
 		    System.out.println("Operation done successfully");
 		
-		    
+
 	      // 设置响应内容类型
 	      response.setContentType("text/html");
 
 	      // 实际的逻辑是在这里
 	      PrintWriter out = response.getWriter();
 	      out.println("<p>" + count + "</p>");
+		    
 	}
 
 }

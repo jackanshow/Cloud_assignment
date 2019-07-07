@@ -22,6 +22,11 @@ import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;  
 import org.jfree.data.xy.DefaultXYDataset;  
 
+/*UTA-CSE 6331
+Xiangxiang Wang
+ID: 1001681420*/
+
+
 public class ScatterPlotChart {
      private static double[][] data;
 

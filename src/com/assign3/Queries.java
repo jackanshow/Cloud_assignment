@@ -17,6 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.assign2.SpLoc;
 
+/*UTA-CSE 6331
+Xiangxiang Wang
+ID: 1001681420*/
+
+
 /**
  * Servlet implementation class Queries
  */

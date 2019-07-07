@@ -24,6 +24,11 @@ import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.DefaultXYDataset;
 
+/*UTA-CSE 6331
+Xiangxiang Wang
+ID: 1001681420*/
+
+
 /**
  * Servlet implementation class ShowChart
  */
@@ -70,7 +75,7 @@ public class ShowChart extends HttpServlet {
 	      String sql = "SELECT * FROM earth";
 	      ResultSet rs = stmt.executeQuery(sql);
 	      int i=0;
-
+	      
 	      while ( rs.next() ) {
 	         
 	    	  double lat = Double.parseDouble("".equals(rs.getString("LATITUDE"))?"0.0":rs.getString("LATITUDE"));
@@ -78,7 +83,7 @@ public class ShowChart extends HttpServlet {
 	    	  
 	    	  data[0][i] = lat;
 	    	  data[1][i] = longi;
-	    	  i++;	    	  
+	    	  i++;
 	      }
 	      rs.close();
 	      stmt.close();
@@ -137,8 +142,8 @@ public class ShowChart extends HttpServlet {
                                                true, 
                                                false,
                                                false);  
-        ChartFrame frame = new ChartFrame("…¢µ„Õº", chart, true);  
-        chart.setBackgroundPaint(Color.white);    
+        //ChartFrame frame = new ChartFrame("…¢µ„Õº", chart, true);  
+        /*chart.setBackgroundPaint(Color.white);    
         chart.setBorderPaint(Color.GREEN);    
         chart.setBorderStroke(new BasicStroke(1.5f));    
         XYPlot xyplot = (XYPlot) chart.getPlot();    
@@ -166,7 +171,7 @@ public class ShowChart extends HttpServlet {
         numberaxis.setAutoRangeIncludesZero(false);    
         numberaxis.setTickMarkInsideLength(2.0F);    
         numberaxis.setTickMarkOutsideLength(0.0F);    
-        numberaxis.setAxisLineStroke(new BasicStroke(1.5f));    
+        numberaxis.setAxisLineStroke(new BasicStroke(1.5f));  */  
 
         return chart;
     } 

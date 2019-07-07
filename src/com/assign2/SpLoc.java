@@ -1,13 +1,20 @@
 package com.assign2;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.*;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+/*UTA-CSE 6331
+Xiangxiang Wang
+ID: 1001681420*/
+
 
 /**
  * Servlet implementation class SpLoc
@@ -41,6 +48,15 @@ public class SpLoc extends HttpServlet {
 		      stmt = conn.createStatement();
 		      String sql = "SELECT * FROM earth";
 		      ResultSet rs = stmt.executeQuery(sql);
+		      
+		   // 设置响应内容类型
+	 	      response.setContentType("text/html");
+	 		// 实际的逻辑是在这里
+	 	      PrintWriter out = response.getWriter();
+	 	      out.println("<table border=\"1\">");
+	 	      out.println("<tr><th>"+"ID"+"</th><th>"+"distance"+
+		        			 "<th>"
+		        			 +"</tr>");
 
 		      while ( rs.next() ) {
 		         
@@ -49,9 +65,21 @@ public class SpLoc extends HttpServlet {
 		    	  //System.out.println(distance(lon,lat,longSql,latSql));
 		    	  if(distance(lon,lat,longSql,latSql)<=near) {
 		    		  System.out.println(rs.getString(1)+" "+distance(lon,lat,longSql,latSql));
+		    		  out.println("<tr><th>"+rs.getString(1)+
+		      				"</th><th>"+distance(lon,lat,longSql,latSql)+
+		          			 "<th>"
+		          			 +"</tr>");
 		    	  }
 		    	  
 		      }
+		      out.println("</table>"); 
+		      out.flush();
+		      out.close();
+	        
+		      
+		      
+		      
+		      
 		      rs.close();
 		      stmt.close();
 		      conn.close();
